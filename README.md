@@ -1,9 +1,27 @@
-# Desafio 01 - Docker
+# Desafio Docker - Questão 03
 
-## Para executar o projeto de conversão de temperatura no Docker siga as instruções
+## Aplicação escrita em NodeJS
 
-faça um fork do repositorio e acesse a pasta conversao-temperatura/src e rode o seguinte comando
+Dockerfile
+```bash
+FROM node:14.17.5
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 8080
+CMD ["node", "server.js"]
+```
+ 
+processo de construção da imagem
+
+docker image build -t conversao-temperatura .
+
+rodar a aplicação em container
+
+docker container run -d -p 8080:8080 conversao-temperatura
+
 
 ```bash
-docker container run -d -p 8080:8080 edemirtoldo/conversao-temperatura:v1
+
 ```
