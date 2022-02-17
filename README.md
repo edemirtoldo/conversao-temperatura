@@ -46,7 +46,4 @@ Link de acesso a aplicação de conversão de temperatura <http://localhost:8080
 
 Aplicação Conversão de Temperatura em NodeJS
 
-
-```bash
-
-```
+![nodejs](https://github.com/edemirtoldo/conversao-temperatura/blob/main/img/conversaotemperatura.png)
