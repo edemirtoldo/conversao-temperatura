@@ -13,13 +13,36 @@ EXPOSE 8080
 CMD ["node", "server.js"]
 ```
  
-processo de construção da imagem
+Processo de construção da imagem com Dockerfile
 
-docker image build -t conversao-temperatura .
+```bash
+docker image build -t edemirtoldo/conversao-temperatura:v1 .
+```
+Enviar a imagem v1 para o Docker Hub.
 
-rodar a aplicação em container
+```bash
+docker push edemirtoldo/conversao-temperatura:v1
+```
 
-docker container run -d -p 8080:8080 conversao-temperatura
+Vamos fazer um TAG da imagem.
+
+```bash
+docker tag edemirtoldo/conversao-temperatura:v1 edemirtoldo/conversao-temperatura:latest
+```
+
+Enviar a imagem latest para o Docker Hub.
+
+```bash
+docker push edemirtoldo/conversao-temperatura:latest
+```
+
+Executar a aplicação NodeJS em container.
+
+```bash
+docker container run -d -p 8080:8080 --name conversao-temperatura  edemirtoldo/conversao-temperatura:v1
+```
+
+Aplicação rodando
 
 
 ```bash
