@@ -42,6 +42,8 @@ Executar a aplicação NodeJS em container.
 docker container run -d -p 8080:8080 --name conversao-temperatura  edemirtoldo/conversao-temperatura:v1
 ```
 
+Link de acesso a aplicação de conversão de temperatura <http://localhost:8080/>
+
 Aplicação rodando
 
 
