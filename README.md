@@ -3,6 +3,7 @@
 ## Aplicação escrita em NodeJS
 
 Dockerfile
+
 ```bash
 FROM node:14.17.5
 WORKDIR /app
@@ -11,6 +12,12 @@ RUN npm install
 COPY . .
 EXPOSE 8080
 CMD ["node", "server.js"]
+```
+
+.docekrignore
+
+```bash
+node_modules/
 ```
  
 Processo de construção da imagem com Dockerfile
